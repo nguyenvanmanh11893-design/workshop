@@ -39,11 +39,11 @@
       </section>
     {{end}}
 
-    {{ if or .Site.IsMultiLingual $showvisitedlinks }}
+    {{ if or (gt (len .Site.Languages) 1) $showvisitedlinks }}
     <section id="prefooter">
       <hr/>
       <ul>
-      {{ if and .Site.IsMultiLingual (not .Site.Params.DisableLanguageSwitchingButton)}}
+      {{ if and (gt (len .Site.Languages) 1) (not .Site.Params.DisableLanguageSwitchingButton)}}
         <li>
           <a class="padding">
             <i class="fas fa-language fa-fw"></i>
