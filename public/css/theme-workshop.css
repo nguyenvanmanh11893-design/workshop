@@ -194,3 +194,17 @@ div.notices.info p {
     background: #FFF2DB;
 }
 
+.select-style select {
+    color: var(--MENU-SECTIONS-LINK-color, #ccc) !important;
+}
+
+.select-style select:hover {
+    color: var(--MENU-SECTIONS-LINK-HOVER-color, #fff) !important;
+}
+
+.select-style select option {
+    color: #222222 !important;
+    background-color: #ffffff !important;
+}
+
+

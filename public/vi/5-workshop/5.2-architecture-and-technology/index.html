@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="vi" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.66.0" />
+    <meta name="description" content="">
+<meta name="author" content="journeyoftheaverageguy@gmail.com">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Kiến trúc và Công nghệ :: Báo cáo thực tập - Cloud File Manager</title>
+
+    
+    <link href="/css/nucleus.css?1789826447" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1789826447" rel="stylesheet">
+    <link href="/css/hybrid.css?1789826447" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1789826447" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1789826447" rel="stylesheet">
+    <link href="/css/auto-complete.css?1789826447" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1789826447" rel="stylesheet">
+    <link href="/css/theme.css?1789826447" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1789826447" rel="stylesheet">
+    
+    <link href="/css/theme-workshop.css?1789826447" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1789826447"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/vi/5-workshop/5.2-architecture-and-technology/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1789826447"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1789826447"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/vi";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1789826447"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-worklog/" title="Nhật ký công việc" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-worklog/">
+          <b>1. </b>Nhật ký công việc
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-worklog/1-week-1/" title="Tuần 1 - Tổng quan AWS và Cloud Computing" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-worklog/1-week-1/">
+          <b>1.1. </b>Tuần 1 - Tổng quan AWS và Cloud Computing
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-worklog/2-week-2/" title="Tuần 2 - AWS Core Services: EC2, S3 và IAM" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-worklog/2-week-2/">
+          <b>1.2. </b>Tuần 2 - AWS Core Services: EC2, S3 và IAM
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-worklog/3-week-3/" title="Tuần 3 - AWS Networking: VPC, Subnet và Internet Gateway" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-worklog/3-week-3/">
+          <b>1.3. </b>Tuần 3 - AWS Networking: VPC, Subnet và Internet Gateway
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-worklog/4-week-4/" title="Tuần 4 - Amazon RDS và DynamoDB" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-worklog/4-week-4/">
+          <b>1.4. </b>Tuần 4 - Amazon RDS và DynamoDB
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-worklog/5-week-5/" title="Tuần 5 - AWS Lambda và Serverless" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-worklog/5-week-5/">
+          <b>1.5. </b>Tuần 5 - AWS Lambda và Serverless
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-worklog/6-week-6/" title="Tuần 6 - Giám sát CloudWatch, Đóng gói Dự án và Báo cáo Thực tập Cloud File Manager" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-worklog/6-week-6/">
+          <b>1.6. </b>Tuần 6 - Giám sát CloudWatch, Đóng gói Dự án và Báo cáo Thực tập Cloud File Manager
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-proposal/" title="Đề xuất" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-proposal/">
+          <b>2. </b>Đề xuất
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-blogs/" title="Các bài blogs đã đăng" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-blogs/">
+          <b>3. </b>Các bài blogs đã đăng
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-events/" title="Các events đã tham gia" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-events/">
+          <b>4. </b>Các events đã tham gia
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-events/1-fcaj-community-day/" title="4.1. FCAJ Community Day" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-events/1-fcaj-community-day/">
+          4.1. FCAJ Community Day
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/" title="Workshop" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/vi/5-workshop/">
+          <b>5. </b>Workshop
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.1-overview/" title="Tổng quan Workshop" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-workshop/5.1-overview/">
+          <b>5.1. </b>Tổng quan Workshop
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.2-architecture-and-technology/" title="Kiến trúc và Công nghệ" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/vi/5-workshop/5.2-architecture-and-technology/">
+          <b>5.2. </b>Kiến trúc và Công nghệ
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.3-prerequisites/" title="Chuẩn bị môi trường" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-workshop/5.3-prerequisites/">
+          <b>5.3. </b>Chuẩn bị môi trường
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.4-hands-on/" title="Các bước thực hành chính" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-workshop/5.4-hands-on/">
+          <b>5.4. </b>Các bước thực hành chính
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.4-hands-on/5.4.1-bootstrap-services/" title="Khởi chạy và kiểm tra dịch vụ" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-workshop/5.4-hands-on/5.4.1-bootstrap-services/">
+          <b>5.4.1 </b>Khởi chạy và kiểm tra dịch vụ
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.4-hands-on/5.4.2-auth-and-direct-upload/" title="Xác thực và Tải tệp trực tiếp lên S3" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-workshop/5.4-hands-on/5.4.2-auth-and-direct-upload/">
+          <b>5.4.2 </b>Xác thực và Tải tệp trực tiếp lên S3
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.4-hands-on/5.4.3-validation-and-finalization/" title="Kiểm định tệp với Lambda và Durable Worker" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-workshop/5.4-hands-on/5.4.3-validation-and-finalization/">
+          <b>5.4.3 </b>Kiểm định tệp với Lambda và Durable Worker
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.4-hands-on/5.4.4-lifecycle-and-reconciliation/" title="Vòng đời tệp, Thùng rác và Đối soát dữ liệu" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-workshop/5.4-hands-on/5.4.4-lifecycle-and-reconciliation/">
+          <b>5.4.4 </b>Vòng đời tệp, Thùng rác và Đối soát dữ liệu
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.5-technical-highlights/" title="Điểm kỹ thuật nổi bật" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-workshop/5.5-technical-highlights/">
+          <b>5.5. </b>Điểm kỹ thuật nổi bật
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.6-testing-and-evaluation/" title="Kiểm thử và Đánh giá kết quả" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-workshop/5.6-testing-and-evaluation/">
+          <b>5.6. </b>Kiểm thử và Đánh giá kết quả
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-workshop/5.7-cleanup/" title="Dọn dẹp tài nguyên và Tổng kết" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-workshop/5.7-cleanup/">
+          <b>5.7. </b>Dọn dẹp tài nguyên và Tổng kết
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-self-evaluation/" title="Tự đánh giá" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-self-evaluation/">
+          <b>6. </b>Tự đánh giá
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/7-feedback/" title="Chia sẻ, đóng góp ý kiến" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/7-feedback/">
+          <b>7. </b>Chia sẻ, đóng góp ý kiến
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="http://awsstudygroup.com"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - Nhóm FB</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="/5-workshop/5.2-architecture-and-technology/">English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="vi" value="/vi/5-workshop/5.2-architecture-and-technology/" selected>Tiếng Việt</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830891&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
+</left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>19/09/2026</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i>
+                <a href="https://cloudjourney.awsstudygroup.com/"  style="color:orange">First Cloud AI Journey</a>
+        </i>
+        </left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/vi/'>Báo cáo thực tập</a> > <a href='/vi/5-workshop/'>Workshop</a> > Kiến trúc và Công nghệ
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-kiến-trúc-tổng-thể-hệ-thống">1. Kiến trúc Tổng thể Hệ thống</a></li>
+        <li><a href="#2-vai-trò-và-chức-năng-của-từng-thành-phần">2. Vai trò và Chức năng của Từng Thành phần</a></li>
+        <li><a href="#3-thiết-kế-ranh-giới-mạng-và-bảo-mật">3. Thiết kế Ranh giới Mạng và Bảo mật</a></li>
+        <li><a href="#4-trạng-thái-triển-khai-cục-bộ-vs-đám-mây-aws">4. Trạng thái Triển khai: Cục bộ vs. Đám mây AWS</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Kiến trúc và Công nghệ
+            </h1>
+          
+
+        
+
+
+
+	<hr>
+<h3 id="1-kiến-trúc-tổng-thể-hệ-thống">1. Kiến trúc Tổng thể Hệ thống</h3>
+<p>Hệ thống <strong>Cloud File Manager</strong> được thiết kế theo kiến trúc phân tách rõ ràng giữa lớp quản lý siêu dữ liệu (Metadata Management) và lớp lưu trữ nhị phân (Binary Object Storage).</p>
+<!-- raw HTML omitted -->
+<pre><code>+----------------------------------------------------------------------------------------------------+
+|                                         CLIENT LAYER                                               |
+|  React 18 + TypeScript + Vite + Ant Design 5 (Single Page Application)                             |
+|  - HttpOnly Cookie (Opaque Session ID) | Custom Header: X-CSRF-Token                               |
++-----------------------------------+----------------------------------------+-----------------------+
+                                    |                                        |
+                 1. Khởi tạo phiên  | 2. Nhận S3 Presigned POST              | 3. Tải tệp trực tiếp
+                    và giữ chỗ Quota|    Policy &amp; Credentials                |    (Direct Upload)
+                                    v                                        v
++-----------------------------------+--------------------+   +---------------+-----------------------+
+|                 BACKEND API SERVER                     |   |               AMAZON S3               |
+|  Node.js (&gt;=20) / Express.js (ES Modules)              |   |  Bucket: Private, Versioned, TLS-only |
+|  - Middleware: Opaque Session, CSRF, Error, RequestId  |   |                                       |
+|  - Controllers: Auth, Folder, File, Quota, Activity    |   |  Cấu trúc tiền tố (Prefixes):         |
+|  - Services: Presigned URL, Quota, Lifecycle           |   |  - incoming/{userId}/{uploadId}       |
+|  - Sequelize ORM (Migrations, Models)                  |   |  - objects/{userId}/{fileId}          |
++-----------------------------------+--------------------+   |  - reports/{uploadId}.json            |
+                                    |                        +---------------+-----------------------+
+                                    | 4. Lưu metadata tạm                    |
+                                    v    vào bảng UploadSessions             | 5. s3:ObjectCreated
++-----------------------------------+--------------------+                   v    (chỉ tiền tố incoming/)
+|                 DATABASE LAYER                         |   +---------------+-----------------------+
+|  MySQL (InnoDB Engine)                                 |   |            AWS LAMBDA                 |
+|  - Bảng: Users, Sessions, Invitations                  |   |  s3-file-validator (Outside VPC)      |
+|  - Bảng: Folders, Files, UploadSessions                |   |  - Đọc magic bytes phân tích tệp      |
+|  - Bảng: Jobs, AuditLogs, ReconciliationFindings       |   |  - Xuất báo cáo reports/{uploadId}.json|
++-----------------------------------+--------------------+   +---------------+-----------------------+
+                                    ^                                        |
+                                    | 7. Giao dịch khóa an toàn              | 6. SQS Failure
+                                    |    (Fenced DB Transaction)             |    Destination (DLQ)
++-----------------------------------+--------------------+                   v
+|             DURABLE BACKGROUND WORKER                  |   +---------------+-----------------------+
+|  Tiến trình nền riêng biệt: npm run worker             |   |            AMAZON SQS                 |
+|  - Quét bảng Jobs: FINALIZE_UPLOAD, PURGE_FILE, ...    |&lt;--+  validator-dlq (Mã hóa SSE, 14 ngày)  |
+|  - Tranh chấp khóa: Lease token &amp; lease expiration     |   +---------------------------------------+
+|  - Sao chép tệp nội bộ S3 (incoming -&gt; objects)       |
+|  - Cập nhật File READY, quyết toán Quota &amp; AuditLog    |
++--------------------------------------------------------+
+</code></pre><hr>
+<h3 id="2-vai-trò-và-chức-năng-của-từng-thành-phần">2. Vai trò và Chức năng của Từng Thành phần</h3>
+<h4 id="21-frontend">2.1 Frontend</h4>
+<ul>
+<li><strong>Công nghệ</strong>: React 18, TypeScript, Vite, Ant Design 5, React Router v6.</li>
+<li><strong>Vai trò</strong>:
+<ul>
+<li>Cung cấp giao diện đĩa lưu trữ đám mây trực quan với cây thư mục phân cấp, thanh điều hướng breadcrumbs, hộp thoại tạo/đổi tên/di chuyển thư mục.</li>
+<li>Hộp thoại tải tệp (<code>UploadModal.tsx</code>) hỗ trợ kéo thả tệp, kiểm tra sơ bộ định dạng (PDF, JPEG, PNG, TXT) và dung lượng (&lt; 50 MiB) phía trình duyệt.</li>
+<li>Quản lý phiên đăng nhập trong suốt bằng cookie, tự động đính kèm header <code>X-CSRF-Token</code> trong toàn bộ các yêu cầu HTTP ghi dữ liệu (POST, PUT, DELETE).</li>
+<li>Thực hiện gửi yêu cầu Multipart Form trực tiếp lên endpoint của Amazon S3 và cập nhật thanh tiến trình (progress bar) theo thời gian thực.</li>
+</ul>
+</li>
+</ul>
+<h4 id="22-backend-api-server">2.2 Backend API Server</h4>
+<ul>
+<li><strong>Công nghệ</strong>: Node.js (&gt;=20), Express.js (ES Modules), Sequelize ORM.</li>
+<li><strong>Vai trò</strong>:
+<ul>
+<li><strong>Xác thực &amp; Phân quyền</strong>: Kiểm tra tính hợp lệ của mã mời khi đăng ký; quản lý phiên làm việc bằng Opaque Session ID lưu trong bảng <code>Sessions</code>; xác thực quyền sở hữu tệp tuyệt đối theo <code>req.user.id</code>.</li>
+<li><strong>Tạo chính sách tải tệp S3</strong>: Sinh ra Presigned POST Policy với đầy đủ điều kiện ràng buộc khắt khe (kích thước tối đa, đường dẫn chính xác tại tiền tố <code>incoming/{userId}/{uploadId}</code>).</li>
+<li><strong>Quản lý hạn mức (Quota Management)</strong>: Đặt trước dung lượng (<code>used_bytes + size &lt;= max_bytes</code>) ngay khi phiên tải lên được tạo, ngăn chặn việc người dùng vượt quá dung lượng cho phép.</li>
+<li><strong>API quản lý vòng đời</strong>: Cung cấp các endpoint chuyển tệp vào thùng rác (<code>/trash</code>), khôi phục (<code>/restore</code>), xóa vĩnh viễn (<code>/purge</code>) và xem nhật ký thao tác (<code>/activity</code>).</li>
+</ul>
+</li>
+</ul>
+<h4 id="23-amazon-s3">2.3 Amazon S3</h4>
+<ul>
+<li><strong>Cấu hình</strong>: Bucket riêng tư (Private), bật tính năng kiểm soát phiên bản (Bucket Versioning), bắt buộc giao thức TLS (HTTPS only) và chặn toàn bộ quyền truy cập công khai (Block Public Access).</li>
+<li><strong>Quy hoạch tiền tố (Prefix Architecture)</strong>:
+<ul>
+<li><code>incoming/{userId}/{uploadId}</code>: Lưu trữ tạm thời tệp người dùng vừa tải lên.</li>
+<li><code>reports/{uploadId}.json</code>: Chứa kết quả thẩm định nội dung tệp do hàm Lambda sinh ra.</li>
+<li><code>objects/{userId}/{fileId}</code>: Lưu trữ chính thức các tệp đã vượt qua khâu kiểm định nội dung.</li>
+</ul>
+</li>
+</ul>
+<h4 id="24-aws-lambda-validator">2.4 AWS Lambda Validator</h4>
+<ul>
+<li><strong>Hàm</strong>: <code>lambdas/s3-file-validator</code> (Node.js 20/22 runtime).</li>
+<li><strong>Vai trò</strong>:
+<ul>
+<li>Đặt ngoài VPC để tối ưu thời gian khởi động (cold start) và tiết kiệm chi phí ENI/NAT Gateway.</li>
+<li>Nhận sự kiện <code>s3:ObjectCreated</code> tại tiền tố <code>incoming/</code>.</li>
+<li>Phân tích byte đầu tiên (magic bytes) của tệp tin:
+<ul>
+<li>PDF: Bắt đầu bằng chuỗi nhị phân tương ứng <code>%PDF-</code>.</li>
+<li>PNG: Bắt đầu bằng 8 bytes chữ ký <code>\x89PNG\r\n\x1a\n</code>.</li>
+<li>JPEG: Bắt đầu bằng 3 bytes <code>\xFF\xD8\xFF</code>.</li>
+<li>TXT: Xác thực mã hóa ký tự hợp lệ UTF-8 / ASCII.</li>
+</ul>
+</li>
+<li>Ghi báo cáo thẩm định dạng JSON chuẩn tắc vào <code>reports/{uploadId}.json</code>.</li>
+<li>Nếu phát sinh lỗi hoặc ngoại lệ, sự kiện tự động được đẩy về hàng đợi <strong>Amazon SQS Dead-Letter Queue (DLQ)</strong>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="25-lớp-xử-lý-nền-bền-vững">2.5 Lớp Xử lý Nền Bền vững</h4>
+<ul>
+<li><strong>Tiến trình</strong>: Chạy riêng biệt thông qua lệnh <code>npm run worker</code>.</li>
+<li><strong>Vai trò</strong>:
+<ul>
+<li>Quét các công việc đến hạn trong bảng <code>Jobs</code> của MySQL theo cơ chế tranh chấp khóa phân tán (Lease Fencing).</li>
+<li>Đọc báo cáo kiểm định từ <code>reports/{uploadId}.json</code>:
+<ul>
+<li>Nếu <strong>HỢP LỆ (PASSED)</strong>: Thực hiện sao chép nguyên trạng phiên bản chính xác (Exact-version Copy) từ <code>incoming/</code> sang <code>objects/</code>, mở giao dịch cơ sở dữ liệu cập nhật trạng thái tệp sang <code>READY</code>, quyết toán hạn mức và ghi lịch sử kiểm toán.</li>
+<li>Nếu <strong>TỪ CHỐI (REJECTED)</strong>: Cập nhật trạng thái <code>REJECTED</code>, hoàn trả hạn mức lưu trữ đã đặt trước và ghi nhật ký cảnh báo.</li>
+</ul>
+</li>
+<li>Thực hiện các tác vụ nền định kỳ: Xóa phiên tải lên bỏ dở quá hạn (<code>EXPIRE_UPLOAD_SESSION</code>), xóa vĩnh viễn tệp trong thùng rác sau 7 ngày (<code>PURGE_FILE</code>), và chạy thuật toán đối soát tệp mồ côi (<code>RECONCILE</code>).</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="3-thiết-kế-ranh-giới-mạng-và-bảo-mật">3. Thiết kế Ranh giới Mạng và Bảo mật</h3>
+<p>Theo cấu hình hạ tầng Terraform chuẩn hóa tại Singapore (<code>ap-southeast-1</code>):</p>
+<!-- raw HTML omitted -->
+<pre><code>+----------------------------------------------------------------------------------------------------+
+|                                    AWS REGION: ap-southeast-1 (Singapore)                          |
+|                                                                                                    |
+|  +----------------------------------------------------------------------------------------------+  |
+|  | VPC (10.0.0.0/16)                                                                            |  |
+|  |                                                                                              |  |
+|  |  +-------------------------------------+  +-----------------------------------------------+  |  |
+|  |  | Public Subnet (10.0.1.0/24)          |  | Private DB Subnets (10.0.11.0/24, 10.0.12.0/24) |  |
+|  |  |                                     |  | (Không có Internet Gateway hoặc NAT Gateway)  |  |  |
+|  |  |  [EC2 Instance]                    |  |                                               |  |  |
+|  |  |  - Nginx Reverse Proxy (443 TLS)    |  |  [Amazon RDS MySQL]                           |  |  |
+|  |  |  - Express API (127.0.0.1:3000)     |  |  - Port 3306 chỉ mở cho EC2 Security Group    |  |  |
+|  |  |  - Durable Worker (Tiến trình nền)  |  |  - Mã hóa KMS lưu trữ dữ liệu                 |  |  |
+|  |  |  - IMDSv2 bắt buộc                  |  |  - Tự động sao lưu 7 ngày                     |  |  |
+|  |  |  - Không mở cổng SSH (Port 22)      |  |                                               |  |  |
+|  |  +------------------+------------------+  +-----------------------+-----------------------+  |  |
+|  |                     |                                             |                          |  |
+|  |                     +----------------------+----------------------+                          |  |
+|  |                                            |                                                 |  |
+|  |                     +----------------------v----------------------+                          |  |
+|  |                     | S3 Gateway Endpoint (Miễn phí, nội bộ VPC)  |                          |  |
+|  |                     +----------------------+----------------------+                          |  |
+|  +--------------------------------------------|-------------------------------------------------+  |
+|                                               |                                                    |
+|  +--------------------------------------------v-------------------------------------------------+  |
+|  | Dịch vụ AWS ngoài VPC (Outside VPC Services)                                                 |  |
+|  |                                                                                              |  |
+|  |  [Amazon S3 Bucket]               [AWS Lambda]                   [Amazon SQS]                |  |
+|  |  - Private, Versioned, CORS       - s3-file-validator            - validator-dlq (Encrypted) |  |
+|  |  - incoming/, objects/, reports/  - Least privilege IAM          - Lưu vết lỗi 14 ngày       |  |
+|  +----------------------------------------------------------------------------------------------+  |
++----------------------------------------------------------------------------------------------------+
+</code></pre><h4 id="các-chốt-bảo-mật-cốt-lõi">Các chốt bảo mật cốt lõi:</h4>
+<ol>
+<li><strong>Không mở cổng SSH</strong>: Toàn bộ thao tác quản trị máy chủ EC2 được thực hiện qua AWS Systems Manager (SSM Session Manager), loại bỏ hoàn toàn nguy cơ tấn công brute-force cổng 22.</li>
+<li><strong>Cơ sở dữ liệu hoàn toàn cách ly</strong>: RDS MySQL nằm trong Subnet riêng biệt, không có bảng định tuyến ra Internet Gateway, chỉ chấp nhận kết nối trên cổng 3306 từ duy nhất Security Group của máy chủ EC2.</li>
+<li><strong>S3 Gateway Endpoint</strong>: Toàn bộ lưu lượng truyền tải dữ liệu giữa EC2/Worker và Amazon S3 đi qua Gateway Endpoint nội bộ của AWS, không đi qua mạng Internet công cộng và không phát sinh phí truyền dữ liệu.</li>
+<li><strong>Bảo vệ danh tính đám mây bằng IMDSv2</strong>: Bắt buộc sử dụng Instance Metadata Service phiên bản 2 (<code>http_tokens = &quot;required&quot;</code>), vô hiệu hóa các cuộc tấn công SSRF nhằm đánh cắp IAM Role của máy chủ.</li>
+</ol>
+<hr>
+<h3 id="4-trạng-thái-triển-khai-cục-bộ-vs-đám-mây-aws">4. Trạng thái Triển khai: Cục bộ vs. Đám mây AWS</h3>
+<p>Để đảm bảo tính trung thực kỹ thuật tuyệt đối trong báo cáo, sự khác biệt giữa môi trường cục bộ và đám mây AWS được xác định rõ:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Tiêu chí</th>
+<th align="left">Môi trường Cục bộ</th>
+<th align="left">Môi trường AWS Production</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Trạng thái thực tế</strong></td>
+<td align="left"><strong>ĐÃ HOÀN THIỆN &amp; KIỂM THỬ</strong></td>
+<td align="left"><strong>ĐÃ CẤU HÌNH &amp; KIỂM TRA MÃ NGUỒN</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>Giao diện Web</strong></td>
+<td align="left">Chạy bằng Vite dev server (<code>http://localhost:5173</code>)</td>
+<td align="left">Được build thành tài nguyên tĩnh và phân phối qua Nginx HTTPS</td>
+</tr>
+<tr>
+<td align="left"><strong>API &amp; Worker</strong></td>
+<td align="left">Chạy bằng Node.js trên máy trạm cục bộ</td>
+<td align="left">Chạy dưới dạng systemd service do root sở hữu trên EC2 Linux</td>
+</tr>
+<tr>
+<td align="left"><strong>Cơ sở dữ liệu</strong></td>
+<td align="left">MySQL Server cục bộ (hoặc XAMPP) cổng 3306</td>
+<td align="left">Amazon RDS MySQL Multi-Subnet có mã hóa lưu trữ KMS và sao lưu 7 ngày</td>
+</tr>
+<tr>
+<td align="left"><strong>Kho lưu trữ tệp</strong></td>
+<td align="left">Amazon S3 bucket thật hoặc giả lập S3 qua bộ test adapter</td>
+<td align="left">Amazon S3 Singapore với Versioning, TLS-only, CORS và Gateway Endpoint</td>
+</tr>
+<tr>
+<td align="left"><strong>Kiểm định tệp</strong></td>
+<td align="left">Xử lý trực tiếp qua adapter dịch vụ hoặc Lambda đóng gói</td>
+<td align="left">AWS Lambda trigger tự động từ S3, có SQS Dead-Letter Queue</td>
+</tr>
+<tr>
+<td align="left"><strong>Bí mật &amp; Cấu hình</strong></td>
+<td align="left">File <code>.env</code> cục bộ (gitignored, chỉ nạp khi dev)</td>
+<td align="left">AWS SSM Parameter Store dạng <code>SecureString</code>, nạp trực tiếp vào RAM</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/vi/5-workshop/5.1-overview/" title="Tổng quan Workshop"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/vi/5-workshop/5.3-prerequisites/" title="Chuẩn bị môi trường" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1789826447"></script>
+    <script src="/js/perfect-scrollbar.min.js?1789826447"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1789826447"></script>
+    <script src="/js/jquery.sticky.js?1789826447"></script>
+    <script src="/js/featherlight.min.js?1789826447"></script>
+    <script src="/js/highlight.pack.js?1789826447"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1789826447"></script>
+    <script src="/js/learn.js?1789826447"></script>
+    <script src="/js/hugo-learn.js?1789826447"></script>
+
+    <link href="/mermaid/mermaid.css?1789826447" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1789826447"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-158079754-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

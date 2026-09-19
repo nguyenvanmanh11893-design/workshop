@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.66.0" />
+    <meta name="description" content="">
+<meta name="author" content="journeyoftheaverageguy@gmail.com">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Proposal :: Internship Report - Cloud File Manager</title>
+
+    
+    <link href="/css/nucleus.css?1789826447" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1789826447" rel="stylesheet">
+    <link href="/css/hybrid.css?1789826447" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1789826447" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1789826447" rel="stylesheet">
+    <link href="/css/auto-complete.css?1789826447" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1789826447" rel="stylesheet">
+    <link href="/css/theme.css?1789826447" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1789826447" rel="stylesheet">
+    
+    <link href="/css/theme-workshop.css?1789826447" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1789826447"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/2-proposal/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1789826447"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1789826447"></script>
+<script type="text/javascript">
+    
+        var baseurl = "";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1789826447"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-worklog/" title="Worklog" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-worklog/">
+          <b>1. </b>Worklog
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-worklog/1-week-1/" title="Week 1 - AWS and Cloud Computing Overview" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-worklog/1-week-1/">
+          <b>1.1. </b>Week 1 - AWS and Cloud Computing Overview
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-worklog/2-week-2/" title="Week 2 - AWS Core Services: EC2, S3 and IAM" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-worklog/2-week-2/">
+          <b>1.2. </b>Week 2 - AWS Core Services: EC2, S3 and IAM
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-worklog/3-week-3/" title="Week 3 - AWS Networking: VPC, Subnet and Internet Gateway" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-worklog/3-week-3/">
+          <b>1.3. </b>Week 3 - AWS Networking: VPC, Subnet and Internet Gateway
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-worklog/4-week-4/" title="Week 4 - Amazon RDS and DynamoDB" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-worklog/4-week-4/">
+          <b>1.4. </b>Week 4 - Amazon RDS and DynamoDB
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-worklog/5-week-5/" title="Week 5 - AWS Lambda and Serverless" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-worklog/5-week-5/">
+          <b>1.5. </b>Week 5 - AWS Lambda and Serverless
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-worklog/6-week-6/" title="Week 6 - CloudWatch Monitoring, Project Packaging, and Final Cloud File Manager Report" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-worklog/6-week-6/">
+          <b>1.6. </b>Week 6 - CloudWatch Monitoring, Project Packaging, and Final Cloud File Manager Report
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-proposal/" title="Proposal" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/2-proposal/">
+          <b>2. </b>Proposal
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-blogs/" title="Blogs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-blogs/">
+          <b>3. </b>Blogs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-events/" title="Events Participated" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-events/">
+          <b>4. </b>Events Participated
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-events/1-fcaj-community-day/" title="4.1. FCAJ Community Day" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-events/1-fcaj-community-day/">
+          4.1. FCAJ Community Day
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/" title="Workshop" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-workshop/">
+          <b>5. </b>Workshop
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/5.1-overview/" title="Workshop Overview" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-workshop/5.1-overview/">
+          <b>5.1. </b>Workshop Overview
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/5.2-architecture-and-technology/" title="Architecture and Technology" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-workshop/5.2-architecture-and-technology/">
+          <b>5.2. </b>Architecture and Technology
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/5.3-prerequisites/" title="Prerequisites and Environment Setup" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-workshop/5.3-prerequisites/">
+          <b>5.3. </b>Prerequisites and Environment Setup
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/5.4-hands-on/" title="Hands-on Exercises" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-workshop/5.4-hands-on/">
+          <b>5.4. </b>Hands-on Exercises
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/5.4-hands-on/5.4.1-bootstrap-services/" title="Bootstrap and Verify Services" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-workshop/5.4-hands-on/5.4.1-bootstrap-services/">
+          <b>5.4.1 </b>Bootstrap and Verify Services
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/5.4-hands-on/5.4.2-auth-and-direct-upload/" title="Authentication and Direct S3 Upload" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-workshop/5.4-hands-on/5.4.2-auth-and-direct-upload/">
+          <b>5.4.2 </b>Authentication and Direct S3 Upload
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/5.4-hands-on/5.4.3-validation-and-finalization/" title="Validation and Worker Finalization" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-workshop/5.4-hands-on/5.4.3-validation-and-finalization/">
+          <b>5.4.3 </b>Validation and Worker Finalization
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/5.4-hands-on/5.4.4-lifecycle-and-reconciliation/" title="Lifecycle, Trash, and Reconciliation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-workshop/5.4-hands-on/5.4.4-lifecycle-and-reconciliation/">
+          <b>5.4.4 </b>Lifecycle, Trash, and Reconciliation
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/5.5-technical-highlights/" title="Technical Highlights" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-workshop/5.5-technical-highlights/">
+          <b>5.5. </b>Technical Highlights
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/5.6-testing-and-evaluation/" title="Testing and Evaluation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-workshop/5.6-testing-and-evaluation/">
+          <b>5.6. </b>Testing and Evaluation
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-workshop/5.7-cleanup/" title="Resource Cleanup and Conclusion" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-workshop/5.7-cleanup/">
+          <b>5.7. </b>Resource Cleanup and Conclusion
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/6-self-evaluation/" title="Self Evaluation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/6-self-evaluation/">
+          <b>6. </b>Self Evaluation
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/7-feedback/" title="Sharing and Feedback" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/7-feedback/">
+          <b>7. </b>Sharing and Feedback
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://aws.amazon.com/blogs"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="/2-proposal/" selected>English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="vi" value="/vi/2-proposal/">Tiếng Việt</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830891&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
+</left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>19/09/2026</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i>
+                <a href="https://cloudjourney.awsstudygroup.com/"  style="color:orange">First Cloud AI Journey</a>
+        </i>
+        </left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/'>Internship Report</a> > Proposal
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-executive-summary">1. Executive Summary</a></li>
+        <li><a href="#2-problem-statement--context">2. Problem Statement &amp; Context</a></li>
+        <li><a href="#3-proposed-solution-architecture">3. Proposed Solution Architecture</a></li>
+        <li><a href="#4-technology-stack--design-decisions">4. Technology Stack &amp; Design Decisions</a></li>
+        <li><a href="#5-implementation-roadmap-6-week-program">5. Implementation Roadmap (6-Week Program)</a></li>
+        <li><a href="#6-infrastructure-cost-estimation">6. Infrastructure Cost Estimation</a></li>
+        <li><a href="#7-risk-assessment--mitigation-strategies">7. Risk Assessment &amp; Mitigation Strategies</a></li>
+        <li><a href="#8-expected-outcomes">8. Expected Outcomes</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Proposal
+            </h1>
+          
+
+        
+
+
+
+	<h1 id="proposal-cloud-native-personal-file-storage-and-management-system">Proposal: Cloud-Native Personal File Storage and Management System</h1>
+<hr>
+<h3 id="1-executive-summary">1. Executive Summary</h3>
+<p><strong>Cloud File Manager</strong> is a personal cloud storage and file management solution (inspired by Google Drive), architected to deliver an intuitive, secure, and resource-optimized user experience.</p>
+<p>The system combines the responsiveness of modern web technologies (<strong>React 18, TypeScript, Vite, Ant Design</strong>) with a service-oriented backend (<strong>Node.js, Express, Sequelize, MySQL</strong>) and production-grade <strong>Amazon Web Services (AWS)</strong> primitives—including <strong>Amazon S3, AWS Lambda, Amazon SQS, Amazon CloudWatch</strong>, alongside Infrastructure as Code (<strong>Terraform</strong>).</p>
+<p>The design specifically tackles traditional performance and security bottlenecks through:</p>
+<ul>
+<li><strong>Direct-to-S3 Uploads</strong>: Files stream directly from client browsers to S3 via Presigned POST Policies, completely eliminating I/O bottlenecks and memory exhaustion on the API server.</li>
+<li><strong>Rigorous Quota Reservation</strong>: Atomic pre-allocation and validation of storage limits before uploads commence.</li>
+<li><strong>Outside-VPC Lambda Validator</strong>: Fast, cost-efficient binary content validation (magic bytes inspection) triggered by S3 events.</li>
+<li><strong>Durable Background Worker</strong>: An autonomous processing pipeline equipped with database-backed lease fencing, jittered exponential backoff, and idempotent job transitions.</li>
+<li><strong>Comprehensive Lifecycle Management</strong>: Multi-stage Trash and Restore workflows, version-aware S3 deletion, and automated reconciliation routines to eliminate orphaned objects and state drift.</li>
+</ul>
+<hr>
+<h3 id="2-problem-statement--context">2. Problem Statement &amp; Context</h3>
+<h4 id="21-real-world-challenges">2.1 Real-World Challenges</h4>
+<p>In conventional file storage architectures, incoming binary streams pass directly through the backend API server before being persisted to local disks or relayed to object storage. This approach creates severe operational liabilities:</p>
+<ol>
+<li><strong>Server I/O &amp; Memory Bottlenecks</strong>: High concurrent uploads of medium-to-large files (e.g., 50 MiB) quickly saturate network interfaces and exhaust server RAM.</li>
+<li><strong>Double Bandwidth Costs (Double Egress/Ingress)</strong>: Streaming data first to the API host and subsequently to object storage incurs redundant network hops and elevated latency.</li>
+<li><strong>Malicious Files &amp; Extension Spoofing</strong>: Solely relying on file extensions (<code>.pdf</code>, <code>.png</code>) or client-declared <code>Content-Type</code> headers is vulnerable to bypass without deep binary magic bytes inspection.</li>
+<li><strong>State Drift Between Database and Storage</strong>: Network drops or process crashes during upload or deletion create inconsistencies between database records and underlying S3 objects, resulting in orphaned storage or corrupted quotas.</li>
+<li><strong>Session Security &amp; Multi-tenant Data Leakage</strong>: In multi-user setups, weak session handling or insufficient ownership verification risks unauthorized cross-tenant data access.</li>
+</ol>
+<h4 id="22-project-objectives">2.2 Project Objectives</h4>
+<ul>
+<li>Build an intuitive, responsive personal drive web interface with hierarchical directory navigation.</li>
+<li>Implement a secure Direct-to-S3 upload mechanism without overloading backend server resources.</li>
+<li>Guarantee data consistency and transactional integrity between MySQL and Amazon S3 under all failure scenarios (network interruptions, process crashes).</li>
+<li>Enforce multi-layered security boundaries: Invitation-only registration, Opaque Sessions stored in HttpOnly cookies, CSRF mitigation, and strict per-user tenant isolation.</li>
+</ul>
+<h4 id="23-target-audience--6-week-scope">2.3 Target Audience &amp; 6-Week Scope</h4>
+<ul>
+<li><strong>Target Audience</strong>: Individuals, research groups, or engineers requiring a controlled, secure environment for document and asset storage with strict quota enforcement.</li>
+<li><strong>6-Week Scope</strong>: Complete the core application architecture, secure authentication, Direct S3 upload, durable background workers, file lifecycle operations, comprehensive verification, CloudWatch monitoring, and hands-on workshop modules. Terraform infrastructure definitions and CI/CD pipelines are packaged for local verification and configuration readiness.</li>
+</ul>
+<hr>
+<h3 id="3-proposed-solution-architecture">3. Proposed Solution Architecture</h3>
+<p>The system implements a 3-tier distributed architecture integrated with AWS serverless and queuing services:</p>
+<!-- raw HTML omitted -->
+<pre><code>+-----------------------------------------------------------------------------------+
+|                                  CLIENT LAYER                                     |
+|  React 18 + TypeScript + Vite + Ant Design 5 (SPA)                                |
+|  - HttpOnly Cookie (Opaque Session)                                               |
+|  - X-CSRF-Token Header                                                            |
++-------------------+---------------------------------------+-----------------------+
+                    |                                       |
+       1. Request   | 2. Presigned POST                     | 3. Direct Upload
+          Session   |    Policy + Quota                     |    (Multipart form)
+                    v                                       v
++-------------------+-------------------+   +---------------+-----------------------+
+|            BACKEND API                |   |               AMAZON S3               |
+|  Node.js / Express.js / Sequelize     |   |  Bucket: Private, Versioned, TLS-only |
+|  - Auth &amp; Invitation verification     |   |                                       |
+|  - Quota reservation (ACTIVE)         |   |  Prefixes:                            |
+|  - Folder &amp; File metadata management  |   |  - incoming/{userId}/{uploadId}       |
+|  - Generate S3 Presigned POST         |   |  - objects/{userId}/{fileId}          |
++-------------------+-------------------+   |  - reports/{uploadId}.json            |
+                    |                       +---------------+-----------------------+
+                    | 4. Metadata sync                      |
+                    v                                       | 5. s3:ObjectCreated
++-------------------+-------------------+                   v    (incoming/ only)
+|              DATABASE                 |   +---------------+-----------------------+
+|  MySQL (InnoDB Engine)                |   |            AWS LAMBDA                 |
+|  - Users, Sessions, Invitations       |   |  s3-file-validator (Outside VPC)      |
+|  - Folders, Files, Jobs, AuditLogs    |   |  - Check magic bytes (PDF, Image, TXT)|
+|  - ReconciliationFindings             |   |  - Write JSON validation report       |
++-------------------+-------------------+   +---------------+-----------------------+
+                    ^                                       |
+                    | 7. Fenced DB Transaction              | 6. SQS Dead-Letter
+                    |    (READY / REJECTED)                 |    Queue on failure
+                    |                                       v
++-------------------+-------------------+   +---------------+-----------------------+
+|           DURABLE WORKER              |   |            AMAZON SQS                 |
+|  Separate Node.js Process             |   |  validator-dlq (Encrypted, 14-day)    |
+|  - Claim job via Lease &amp; Fencing      |&lt;--+---------------------------------------+
+|  - Exact-version S3 copy/delete       |
+|  - Exponential Jittered Retry         |
+|  - Quota settlement &amp; Reconciliation  |
++---------------------------------------+
+</code></pre><h4 id="core-architectural-components">Core Architectural Components:</h4>
+<ol>
+<li><strong>Frontend Client (React SPA)</strong>: Manages UI rendering, hierarchical folder navigation, auth flows, and direct-to-S3 multi-part file uploads with real-time progress indicators.</li>
+<li><strong>Backend API (Express.js)</strong>: Handles business logic, validates sessions, issues constrained S3 Presigned POST policies (50 MiB limit, strict <code>incoming/</code> prefix, specific MIME types), and atomically reserves quota.</li>
+<li><strong>Amazon S3 Storage</strong>: Hierarchical object store organized into designated prefixes:
+<ul>
+<li><code>incoming/</code>: Quarantine zone for raw user uploads awaiting asynchronous validation.</li>
+<li><code>objects/</code>: Primary repository for verified, production-ready files.</li>
+<li><code>reports/</code>: JSON validation outputs generated by AWS Lambda.</li>
+</ul>
+</li>
+<li><strong>AWS Lambda Validator</strong>: A serverless function triggered by <code>s3:ObjectCreated</code> events in <code>incoming/</code>. It inspects file magic bytes (PDF <code>%PDF-</code>, PNG <code>\x89PNG</code>, JPEG <code>\xFF\xD8\xFF</code>, valid UTF-8 text) and publishes reports to <code>reports/</code>.</li>
+<li><strong>Durable Background Worker</strong>: An autonomous Node.js process executing background jobs from the <code>Jobs</code> table, utilizing lease fencing, evaluating Lambda reports, moving verified objects to <code>objects/</code>, updating statuses to <code>READY</code>, and logging audit trails.</li>
+<li><strong>Amazon SQS (Dead-Letter Queue)</strong>: Captures unprocessable or failing Lambda events to ensure zero event loss and support operational investigation.</li>
+</ol>
+<hr>
+<h3 id="4-technology-stack--design-decisions">4. Technology Stack &amp; Design Decisions</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Technology</th>
+<th align="left">Role in System</th>
+<th align="left">Key Technical Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>React 18 + TypeScript + Vite</strong></td>
+<td align="left">Frontend SPA Client</td>
+<td align="left">Strong compile-time type checking, fast HMR build cycles, and standardized Ant Design 5 UI components.</td>
+</tr>
+<tr>
+<td align="left"><strong>Express.js (Node &gt;=20)</strong></td>
+<td align="left">RESTful API Server</td>
+<td align="left">Modular layered architecture (Routes, Controllers, Services), Helmet HTTP headers, centralized authentication middleware.</td>
+</tr>
+<tr>
+<td align="left"><strong>MySQL + Sequelize ORM</strong></td>
+<td align="left">Relational Database</td>
+<td align="left">Enforces relational integrity (Foreign Keys, Indexes), provides ACID transaction support for status transitions and quota consistency.</td>
+</tr>
+<tr>
+<td align="left"><strong>Amazon S3</strong></td>
+<td align="left">Primary Object Store</td>
+<td align="left">Enabled S3 Object Versioning, Block Public Access enabled by default, restricted access through time-bounded (15 min) presigned URLs.</td>
+</tr>
+<tr>
+<td align="left"><strong>AWS Lambda</strong></td>
+<td align="left">File Content Validator</td>
+<td align="left">Positioned outside VPC for minimal cold starts and cost efficiency; granted least-privilege access to read <code>incoming/</code> and write <code>reports/</code>.</td>
+</tr>
+<tr>
+<td align="left"><strong>Amazon SQS</strong></td>
+<td align="left">Dead-Letter Queue</td>
+<td align="left">Retains failed upload validation messages with server-side encryption (SSE) and a 14-day retention window.</td>
+</tr>
+<tr>
+<td align="left"><strong>Terraform (v1.10.5)</strong></td>
+<td align="left">Cloud Infrastructure as Code</td>
+<td align="left">Structured AWS modular configuration in Singapore (<code>ap-southeast-1</code>) protected by invariant security controls (no public DB, IMDSv2, TLS enforcement).</td>
+</tr>
+<tr>
+<td align="left"><strong>GitHub Actions</strong></td>
+<td align="left">Automated CI/CD Pipeline</td>
+<td align="left">Multi-stage verification: Linting, Unit tests, Mock DB tests, Terraform static analysis, and cryptographic artifact packaging (SHA-256).</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="5-implementation-roadmap-6-week-program">5. Implementation Roadmap (6-Week Program)</h3>
+<p>The project implementation roadmap is aligned with the 6-week training schedule:</p>
+<ul>
+<li><strong>Week 1: Research &amp; Foundational Cloud Setup</strong>
+<ul>
+<li>Practical orientation with AWS Console, AWS CLI, IAM security models, and EC2 compute instances.</li>
+<li>Define storage system requirements, draft end-to-end architecture, and design relational schemas (Users, Sessions, Folders, Files).</li>
+</ul>
+</li>
+<li><strong>Week 2: Authentication &amp; Hierarchical Folder Management</strong>
+<ul>
+<li>Implement database-backed Opaque Session management via HttpOnly cookies.</li>
+<li>Build dynamic CSRF validation (<code>X-CSRF-Token</code>) and invitation-only account provisioning.</li>
+<li>Develop hierarchical folder CRUD APIs and integrated React Drive UI.</li>
+</ul>
+</li>
+<li><strong>Week 3: Direct-to-S3 Upload Pipeline &amp; Lambda Validator</strong>
+<ul>
+<li>Architect Presigned POST generation coupled with atomic quota reservations.</li>
+<li>Develop the <code>s3-file-validator</code> Lambda function inspecting file magic bytes across supported types.</li>
+<li>Connect S3 Event Notifications to invoke Lambda and write canonical JSON reports to <code>reports/{uploadId}.json</code>.</li>
+</ul>
+</li>
+<li><strong>Week 4: Durable Worker &amp; File Lifecycle Management</strong>
+<ul>
+<li>Construct autonomous background worker processes with database lease fencing and jittered exponential retries.</li>
+<li>Implement Trash, Restore, delayed permanent purge (7-day retention), and version-aware S3 batch deletion (<code>(Key, VersionId)</code> pairs).</li>
+<li>Build automated reconciliation routines to identify orphaned objects and self-heal storage quota drift.</li>
+</ul>
+</li>
+<li><strong>Week 5: Comprehensive Verification, Terraform IaC &amp; Workshop Documentation</strong>
+<ul>
+<li>Execute automated test suites: 82 backend tests, 6 frontend tests, and Terraform HCL security checks.</li>
+<li>Finalize modular Terraform infrastructure templates and CI/CD pipelines with manual approval gates.</li>
+<li>Compile comprehensive workshop lab documentation and the final technical project report.</li>
+</ul>
+</li>
+<li><strong>Week 6: CloudWatch Operational Monitoring, Project Packaging &amp; Final Report</strong>
+<ul>
+<li>Configure Amazon CloudWatch Logs, custom metrics, and a 75 USD Billing Alarm integrated with SNS notifications.</li>
+<li>Verify fault tolerance, SQS DLQ exception handling, and database lease fencing concurrency under failure scenarios.</li>
+<li>Finalize the comprehensive hands-on Workshop guide for Cloud File Manager, package all source artifacts, and complete the final internship report.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="6-infrastructure-cost-estimation">6. Infrastructure Cost Estimation</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Service Component</th>
+<th align="left">Proposed Configuration</th>
+<th align="left">Estimated Cost / Month (USD)</th>
+<th align="left">Notes &amp; Assumptions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Amazon EC2</strong></td>
+<td align="left">1 x <code>t4g.small</code> (or <code>t3.micro</code>), 20 GB gp3 EBS Encrypted</td>
+<td align="left">~$15.00 - $18.00</td>
+<td align="left">Hosts Nginx reverse proxy, Node.js API, and the background worker process.</td>
+</tr>
+<tr>
+<td align="left"><strong>Amazon RDS (MySQL)</strong></td>
+<td align="left">1 x <code>db.t4g.micro</code>, Single-AZ, 20 GB gp3 Storage</td>
+<td align="left">~$17.00 - $20.00</td>
+<td align="left">Primary database, 7-day automated backup retention, isolated in private subnets.</td>
+</tr>
+<tr>
+<td align="left"><strong>Amazon S3</strong></td>
+<td align="left">Standard Storage (~10 - 20 GB), PUT/GET requests</td>
+<td align="left">~$0.50 - $1.50</td>
+<td align="left">Binary object storage and API call operations; Versioning enabled.</td>
+</tr>
+<tr>
+<td align="left"><strong>AWS Lambda</strong></td>
+<td align="left">128 MB RAM, ~10,000 invocations / month</td>
+<td align="left">$0.00 (Free Tier)</td>
+<td align="left">Falls well within the AWS Free Tier threshold (1M requests/month).</td>
+</tr>
+<tr>
+<td align="left"><strong>Amazon SQS &amp; CloudWatch</strong></td>
+<td align="left">1 DLQ Queue, CloudWatch Logs &amp; Metrics</td>
+<td align="left">~$1.00 - $3.00</td>
+<td align="left">Structured JSON logging, host metrics (RAM/Disk), and operational alarms.</td>
+</tr>
+<tr>
+<td align="left"><strong>Data Transfer &amp; Gateway EP</strong></td>
+<td align="left">S3 Gateway Endpoint (Free), Low Egress</td>
+<td align="left">~$1.00 - $2.00</td>
+<td align="left">In-region S3 traffic routed over S3 Gateway Endpoints incurs no data transfer fees.</td>
+</tr>
+<tr>
+<td align="left"><strong>Total Estimated Cost</strong></td>
+<td align="left"></td>
+<td align="left"><strong>~$35.00 - ~$45.00 / month</strong></td>
+<td align="left"><em>Budget alert threshold set at 75.00 USD/month via CloudWatch Billing Alarms.</em></td>
+</tr>
+</tbody>
+</table>
+<p><em>Note:</em> The system is pre-configured with cost alerts via CloudWatch Alarms and an SNS Topic. For production deployment, detailed cost projections from the <strong>AWS Pricing Calculator</strong> should be incorporated based on actual traffic requirements.</p>
+<hr>
+<h3 id="7-risk-assessment--mitigation-strategies">7. Risk Assessment &amp; Mitigation Strategies</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Technical Risk</th>
+<th align="center">Impact</th>
+<th align="center">Probability</th>
+<th align="left">Engineered Mitigation Strategy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Malicious or Extension-Spoofed Uploads</strong></td>
+<td align="center">High</td>
+<td align="center">Medium</td>
+<td align="left">Independent magic bytes validation via Lambda prior to promoting files to <code>objects/</code>. Invalid files are rejected immediately and reserved quota is rolled back.</td>
+</tr>
+<tr>
+<td align="left"><strong>Abandoned Uploads Leading to Ghost Quotas</strong></td>
+<td align="center">Medium</td>
+<td align="center">High</td>
+<td align="left">Enforce a strict 15-minute TTL on upload sessions. The automated Reconciliation worker regularly purges expired active sessions and reclaims quota.</td>
+</tr>
+<tr>
+<td align="left"><strong>Versioning Conflicts During S3 Deletions</strong></td>
+<td align="center">High</td>
+<td align="center">Low</td>
+<td align="left">Implement explicit version-aware batch deletion targeting exact <code>(Key, VersionId)</code> tuples (including delete markers), verified via inventory listing prior to setting DB status to <code>PURGED</code>.</td>
+</tr>
+<tr>
+<td align="left"><strong>Worker Process Crash During Job Execution</strong></td>
+<td align="center">High</td>
+<td align="center">Low</td>
+<td align="left">Database-backed lease fencing (<code>lease_token</code>, <code>lease_expires_at</code>). In the event of a worker failure, the lock expires and a peer worker safely resumes processing.</td>
+</tr>
+<tr>
+<td align="left"><strong>Cross-Site Request Forgery (CSRF)</strong></td>
+<td align="center">Medium</td>
+<td align="center">Medium</td>
+<td align="left">All state-mutating requests (POST, PUT, DELETE) require a cryptographically validated <code>X-CSRF-Token</code> header matching the active server session.</td>
+</tr>
+<tr>
+<td align="left"><strong>Uncontrolled Cloud Infrastructure Costs</strong></td>
+<td align="center">Medium</td>
+<td align="center">Low</td>
+<td align="left">Configure automated 75 USD CloudWatch Billing Alarms integrated with SNS alerts; S3 Lifecycle rules automatically expire temporary incoming files after 30 days.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="8-expected-outcomes">8. Expected Outcomes</h3>
+<ol>
+<li><strong>Architectural &amp; Technical Rigor</strong>:
+<ul>
+<li>Validates a modern tiered cloud storage design, showcasing the performance gains of Direct S3 uploads compared to traditional proxy routing.</li>
+<li>Establishes a fault-tolerant asynchronous processing pipeline with lease fencing and self-healing data reconciliation.</li>
+</ul>
+</li>
+<li><strong>User Experience &amp; Functionality</strong>:
+<ul>
+<li>Delivers a polished, responsive web application enabling seamless directory management, direct uploading, audit tracking, and trash management.</li>
+</ul>
+</li>
+<li><strong>Educational &amp; Workshop Impact</strong>:
+<ul>
+<li>Serves as a reference implementation for engineers mastering full-stack cloud development, advanced AWS service integration, Terraform IaC, and CI/CD pipelines.</li>
+</ul>
+</li>
+</ol>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/1-worklog/6-week-6/" title="Week 6 - CloudWatch Monitoring, Project Packaging, and Final Cloud File Manager Report"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/3-blogs/" title="Blogs" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1789826447"></script>
+    <script src="/js/perfect-scrollbar.min.js?1789826447"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1789826447"></script>
+    <script src="/js/jquery.sticky.js?1789826447"></script>
+    <script src="/js/featherlight.min.js?1789826447"></script>
+    <script src="/js/highlight.pack.js?1789826447"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1789826447"></script>
+    <script src="/js/learn.js?1789826447"></script>
+    <script src="/js/hugo-learn.js?1789826447"></script>
+
+    <link href="/mermaid/mermaid.css?1789826447" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1789826447"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-158079754-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

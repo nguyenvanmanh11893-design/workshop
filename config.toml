@@ -18,9 +18,10 @@ home = [ "HTML", "RSS", "JSON"]
   
 [Languages]
 [Languages.en]
-title = "Create a new AWS account."
+title = "Internship Report - Cloud File Manager"
 weight = 1
 languageName = "English"
+label = "English"
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-aws'></i> AWS Study Group - Blog"
@@ -35,9 +36,10 @@ url = "https://www.facebook.com/groups/awsstudygroupfcj"
 weight = 20
 
 [Languages.vi]
-title = "Tạo mới tài khoản AWS"
+title = "Báo cáo thực tập - Cloud File Manager"
 weight = 2
 languageName = "Tiếng Việt"
+label = "Tiếng Việt"
 
 [[Languages.vi.menu.shortcuts]]
 name = "<i class='fab fa-aws'></i> AWS Study Group - Blog"

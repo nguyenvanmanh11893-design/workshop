@@ -1,32 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
-    <loc>/vi/1-create-new-aws-account/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/1-create-new-aws-account/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/1-create-new-aws-account/"
-                />
-  </url><url>
-    <loc>/vi/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/"
-                />
-  </url><url>
     <loc>/vi/</loc>
+    <lastmod>2026-09-19T10:00:00+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -37,67 +15,374 @@
                 hreflang="vi"
                 href="/vi/"
                 />
-  </url><url>
-    <loc>/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/</loc>
+  </url>
+  
+  <url>
+    <loc>/vi/5-workshop/5.4-hands-on/5.4.1-bootstrap-services/</loc>
+    <lastmod>2026-09-18T23:00:00+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-mfa-setup-for-aws-user-root/2-u2f-security-key/"
+                href="/5-workshop/5.4-hands-on/5.4.1-bootstrap-services/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/"
+                href="/vi/5-workshop/5.4-hands-on/5.4.1-bootstrap-services/"
                 />
-  </url><url>
-    <loc>/vi/2-mfa-setup-for-aws-user-root/</loc>
+  </url>
+  
+  <url>
+    <loc>/vi/5-workshop/5.1-overview/</loc>
+    <lastmod>2026-09-18T23:00:00+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-mfa-setup-for-aws-user-root/"
+                href="/5-workshop/5.1-overview/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-mfa-setup-for-aws-user-root/"
+                href="/vi/5-workshop/5.1-overview/"
                 />
-  </url><url>
-    <loc>/vi/3-create-admin-user-and-group/</loc>
+  </url>
+  
+  <url>
+    <loc>/vi/4-events/1-fcaj-community-day/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-create-admin-user-and-group/"
+                href="/4-events/1-fcaj-community-day/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-create-admin-user-and-group/"
+                href="/vi/4-events/1-fcaj-community-day/"
                 />
-  </url><url>
-    <loc>/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/</loc>
+  </url>
+  
+  <url>
+    <loc>/vi/1-worklog/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/"
+                href="/1-worklog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/"
+                href="/vi/1-worklog/"
                 />
-  </url><url>
-    <loc>/vi/4-verify-new-account/</loc>
+  </url>
+  
+  <url>
+    <loc>/vi/1-worklog/1-week-1/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-verify-new-account/"
+                href="/1-worklog/1-week-1/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-verify-new-account/"
+                href="/vi/1-worklog/1-week-1/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
+    <loc>/vi/5-workshop/5.2-architecture-and-technology/</loc>
+    <lastmod>2026-09-18T23:00:00+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-workshop/5.2-architecture-and-technology/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-workshop/5.2-architecture-and-technology/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/5-workshop/5.4-hands-on/5.4.2-auth-and-direct-upload/</loc>
+    <lastmod>2026-09-18T23:00:00+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-workshop/5.4-hands-on/5.4.2-auth-and-direct-upload/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-workshop/5.4-hands-on/5.4.2-auth-and-direct-upload/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/2-proposal/</loc>
+    <lastmod>2026-09-18T23:00:00+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-proposal/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-proposal/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/1-worklog/2-week-2/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-worklog/2-week-2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-worklog/2-week-2/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/5-workshop/5.3-prerequisites/</loc>
+    <lastmod>2026-09-18T23:00:00+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-workshop/5.3-prerequisites/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-workshop/5.3-prerequisites/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/5-workshop/5.4-hands-on/5.4.3-validation-and-finalization/</loc>
+    <lastmod>2026-09-18T23:00:00+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-workshop/5.4-hands-on/5.4.3-validation-and-finalization/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-workshop/5.4-hands-on/5.4.3-validation-and-finalization/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/3-blogs/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-blogs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-blogs/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/1-worklog/3-week-3/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-worklog/3-week-3/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-worklog/3-week-3/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/5-workshop/5.4-hands-on/</loc>
+    <lastmod>2026-09-18T23:00:00+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-workshop/5.4-hands-on/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-workshop/5.4-hands-on/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/5-workshop/5.4-hands-on/5.4.4-lifecycle-and-reconciliation/</loc>
+    <lastmod>2026-09-18T23:00:00+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-workshop/5.4-hands-on/5.4.4-lifecycle-and-reconciliation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-workshop/5.4-hands-on/5.4.4-lifecycle-and-reconciliation/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/4-events/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-events/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-events/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/1-worklog/4-week-4/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-worklog/4-week-4/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-worklog/4-week-4/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/5-workshop/</loc>
+    <lastmod>2026-09-18T23:00:00+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-workshop/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-workshop/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/5-workshop/5.5-technical-highlights/</loc>
+    <lastmod>2026-09-18T23:00:00+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-workshop/5.5-technical-highlights/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-workshop/5.5-technical-highlights/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/1-worklog/5-week-5/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-worklog/5-week-5/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-worklog/5-week-5/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/5-workshop/5.6-testing-and-evaluation/</loc>
+    <lastmod>2026-09-18T23:00:00+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-workshop/5.6-testing-and-evaluation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-workshop/5.6-testing-and-evaluation/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/6-self-evaluation/</loc>
+    <lastmod>2026-09-18T23:00:00+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/6-self-evaluation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/6-self-evaluation/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/1-worklog/6-week-6/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-worklog/6-week-6/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-worklog/6-week-6/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/7-feedback/</loc>
+    <lastmod>2026-09-19T10:00:00+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/7-feedback/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/7-feedback/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/5-workshop/5.7-cleanup/</loc>
+    <lastmod>2026-09-18T23:00:00+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-workshop/5.7-cleanup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-workshop/5.7-cleanup/"
+                />
+  </url>
+  
+  <url>
     <loc>/vi/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -109,7 +394,9 @@
                 hreflang="vi"
                 href="/vi/categories/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>/vi/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -122,4 +409,5 @@
                 href="/vi/tags/"
                 />
   </url>
+  
 </urlset>
